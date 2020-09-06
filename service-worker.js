@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/hana_tube/precache-manifest.39049272a800c9b1182a3aab8e5a627b.js"
+  "/hana_tube/precache-manifest.6f8218cecfdd3816298ab8566f4281a0.js"
 );
 
 self.addEventListener('message', (event) => {
