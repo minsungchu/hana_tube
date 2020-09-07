@@ -1,0 +1,11 @@
+.nav a {
+  text-decoration: none;
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 3px;
+  margin: 5px;
+}
+
+.nav a:hover {
+  background-color: pink;
+}
