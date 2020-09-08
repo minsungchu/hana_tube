@@ -8,24 +8,25 @@
   margin: 100px;
   padding: 20px;
   box-sizing: border-box;
-  //background-color: yellow;
 }
 
 .channel {
   display: flex;
   justify-content: cetner;
   align-items: center;
-  //background-color: wheat;
   position: relative;
   margin: 0 50px;
 }
 
 .channel_logo {
-  //background-color: skyblue;
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100%;
+}
+
+.channel_logo img {
+  border: 1px solid;
 }
 
 .channel_link {
@@ -43,7 +44,6 @@
 }
 
 .channel_info {
-  //background-color: tomato;
   height: 94%;
   position: absolute;
   top: 20px;
@@ -79,7 +79,6 @@
   font-size: 50px;
   font-weight: 400;
   margin-bottom: 50px;
-  //background-color: violet;
 }
 
 .video-item-container {

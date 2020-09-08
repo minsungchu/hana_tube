@@ -1,11 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.nav {
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
 .nav a {
   text-decoration: none;
   border: 1px solid black;
   border-radius: 8px;
   padding: 3px;
-  margin: 5px;
+  margin: 15px;
+  box-sizing: border-box;
+  height: 60px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 23px;
 }
 
 .nav a:hover {
   background-color: pink;
+}
+
+.nav a:first-child {
+  font-size: 35px;
 }

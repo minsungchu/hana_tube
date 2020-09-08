@@ -8,13 +8,15 @@ import { HashRouter, Route } from "react-router-dom"
 import Navigation from "./components/Navigation";
 import Schana from "./routes/Schana";
 import Joychant from "./routes/Joychant";
+import Home from "./routes/Home";
 
 class App extends React.Component {
   render() {
     return (
       <HashRouter>
         <Navigation />
-        <Route path="/schana" exact={true} component={Schana} />
+        <Route exact path="/" component={Home} />
+        <Route path="/schana" component={Schana} />
         <Route path="/joychant" component={Joychant} />
       </HashRouter>
     );

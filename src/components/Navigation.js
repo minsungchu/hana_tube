@@ -12,8 +12,11 @@ function Navigation() {
     return (
         <div className="container">
             <div className="nav">
+                <Link to="/"><i className="home fas fa-home"></i></Link>
                 <Link to="/schana">신촌하나교회</Link>
                 <Link to="/joychant">조이챈트</Link>
+                <Link>Empty</Link>
+                <Link>Empty</Link>
             </div>
         </div>
     );
