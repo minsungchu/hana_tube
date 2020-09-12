@@ -1,10 +1,11 @@
 import React from "react";
 import axios from 'axios';
 import YouTube from 'react-youtube';
-import "./Joychant.css";
+import Channel from '../components/Channel';
 
 class Joychant extends React.Component {
   state = {
+    id: 1,
     apiKey: "AIzaSyC6GWXm4z_sxkiMBkx08qYzmulaeM9aevA",
     loading: true,
     channelId: "UCNF_5nwMVpkp3cTKlT9rvsg",
@@ -123,31 +124,28 @@ class Joychant extends React.Component {
     return (
       <div className="body">
         <div className="channel-container container">
-          <h1 className="title">유튜브 채널 정보</h1>
-          <div className="channel">
-            <div className="channel_logo">
-              <img className="channel_img" src={this.state.imageLink} alt="text"></img>
-              <a className="channel_link" href={"https://www.youtube.com/channel/" + this.state.channelId} target="_black">유튜브 채널 링크</a>
-            </div>
-            <ul className="channel_info">
-              <li className="channel_item"><strong>{this.state.title}</strong></li>
-              <li className="channel_item">채널 설명: {this.state.description}</li>
-              <li className="channel_item">영상수: {this.NumberWithCommas(this.state.videos)}</li>
-              <li className="channel_item">구독자수: {this.NumberWithCommas(this.state.subscribers)}</li>
-              <li className="channel_item">조회수: {this.NumberWithCommas(this.state.views)}</li>
-            </ul>
-          </div>
+        <h1 className="title">유튜브 채널 정보</h1>
+          <Channel
+            key={this.state.id}
+            imageLink={this.state.imageLink}
+            channelId={this.state.channelId}
+            title={this.state.title}
+            description={this.state.description}
+            videos={this.state.videos}
+            subscribers={this.state.subscribers}
+            views={this.state.views}
+          />
         </div>
         <div className="video-container container">
           <h1 className="video-title title">최신 업로드 영상</h1>
           <div className="video-items">
-            {this.state.videoId.map((item) => (<div className="video-item-container"><YouTube className="video-item" videoId={item} /></div>))}
+            {this.state.videoId.map((item) => (<div key={item} className="video-item-container"><YouTube className="video-item" videoId={item} /></div>))}
           </div>
         </div>
         <div className="video-container container">
           <h1 className="video-title title">조이챈트 시즌1</h1>
           <div className="video-items">
-            {this.state.videoIdSeason1.map((item) => (<div className="video-item-container"><YouTube className="video-item" videoId={item} /></div>))}
+            {this.state.videoIdSeason1.map((item) => (<div key={item} className="video-item-container"><YouTube className="video-item" videoId={item} /></div>))}
           </div>
         </div>
       </div>

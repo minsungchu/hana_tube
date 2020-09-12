@@ -1,10 +1,13 @@
 import React from "react";
 import axios from 'axios';
-import YouTube from 'react-youtube';
 import "./Schana.css";
+import Channel from '../components/Channel';
+//import YoutubeDisplay from '../components/YoutubeDisplay';
+import YouTube from 'react-youtube';
 
 class Schana extends React.Component {
   state = {
+    id: 0,
     apiKey: "AIzaSyC6GWXm4z_sxkiMBkx08qYzmulaeM9aevA",
     loading: true,
     channelId: "UChzI-IJRRWNTdwkHeCs5PKg",
@@ -15,7 +18,7 @@ class Schana extends React.Component {
     subscribers: "",
     views: "",
     playlistId: "",
-    videoId: [],
+    videoId: [""],
     videoList: {}
   };
 
@@ -29,9 +32,9 @@ class Schana extends React.Component {
     const imageLink = data.items[0].snippet.thumbnails.medium.url;
     const title = data.items[0].snippet.title;
     const description = data.items[0].snippet.description;
-    const videos = data.items[0].statistics.videoCount;
-    const subscribers = data.items[0].statistics.subscriberCount;
-    const views = data.items[0].statistics.viewCount;
+    const videos = this.NumberWithCommas(data.items[0].statistics.videoCount);
+    const subscribers = this.NumberWithCommas(data.items[0].statistics.subscriberCount);
+    const views = this.NumberWithCommas(data.items[0].statistics.viewCount);
     const playlistId = data.items[0].contentDetails.relatedPlaylists.uploads;
 
     // update state
@@ -74,28 +77,38 @@ class Schana extends React.Component {
   }
 
   render() {
+    const { loading } = this.state;
     return (
       <div className="body">
         <div className="channel-container container">
           <h1 className="title">유튜브 채널 정보</h1>
-          <div className="channel">
-            <div className="channel_logo">
-              <img className="channel_img" src={this.state.imageLink} alt="text"></img>
-              <a className="channel_link" href={"https://www.youtube.com/channel/" + this.state.channelId} target="_black">유튜브 채널 링크</a>
-            </div>
-            <ul className="channel_info">
-              <li className="channel_item"><strong>{this.state.title}</strong></li>
-              <li className="channel_item">채널 설명: {this.state.description}</li>
-              <li className="channel_item">영상수: {this.NumberWithCommas(this.state.videos)}</li>
-              <li className="channel_item">구독자수: {this.NumberWithCommas(this.state.subscribers)}</li>
-              <li className="channel_item">조회수: {this.NumberWithCommas(this.state.views)}</li>
-            </ul>
-          </div>
+          {
+            loading ?
+              <div className="loading-containger">Process Loading</div>
+              :
+              <Channel
+                key={this.state.id}
+                imageLink={this.state.imageLink}
+                channelId={this.state.channelId}
+                title={this.state.title}
+                description={this.state.description}
+                videos={this.state.videos}
+                subscribers={this.state.subscribers}
+                views={this.state.views}
+              />
+          }
         </div>
         <div className="video-container container">
           <h1 className="video-title title">최신 업로드 영상</h1>
           <div className="video-items">
-            {this.state.videoId.map((item) => (<div className="video-item-container"><YouTube className="video-item" videoId={item} /></div>))}
+            {
+              loading ?
+                <div className="loading-containger">Process Loading</div>
+                :
+                this.state.videoId.map((videoId) => (
+                  <div key={videoId} className="video-item-container"><YouTube className="video-item" videoId={videoId} /></div>
+                ))
+            }
           </div>
         </div>
       </div>
