@@ -1,3 +1,9 @@
+.video-item {
+  width: 600px;
+  height: 310px;
+  border: none;
+}
+
 .video-item-container {
   width: 545px;
   height: 305px;

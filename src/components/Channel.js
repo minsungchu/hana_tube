@@ -1,12 +1,12 @@
 import React from "react";
 import "./Channel.css";
 // add comma for every 3 numbers
+document.cookie = 'safeCookie1=https://youtube.com; SameSite=Lax';
 
 
 function Channel({ id, imageLink, channelId, title, description, videos, subscribers, views }) {
   return (
     <div>
-      <h1 className="title">유튜브 채널 정보</h1>
       <div className="channel">
         <div className="channel_logo">
           <img className="channel_img" src={imageLink} alt="text"></img>

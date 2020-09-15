@@ -1,6 +1,5 @@
 import React from "react";
 import axios from 'axios';
-import YouTube from 'react-youtube';
 import Channel from '../components/Channel';
 
 class Joychant extends React.Component {
@@ -9,7 +8,7 @@ class Joychant extends React.Component {
     apiKey: "AIzaSyC6GWXm4z_sxkiMBkx08qYzmulaeM9aevA",
     loading: true,
     channelId: "UCNF_5nwMVpkp3cTKlT9rvsg",
-    //channelId: "UChzI-IJRRWNTdwkHeCs5PKg",
+    //channelId                                                                                                            
     imageLink: "",
     title: "",
     description: "",
@@ -124,7 +123,7 @@ class Joychant extends React.Component {
     return (
       <div className="body">
         <div className="channel-container container">
-        <h1 className="title">유튜브 채널 정보</h1>
+          <h1 className="title">유튜브 채널 정보</h1>
           <Channel
             key={this.state.id}
             imageLink={this.state.imageLink}
@@ -139,13 +138,21 @@ class Joychant extends React.Component {
         <div className="video-container container">
           <h1 className="video-title title">최신 업로드 영상</h1>
           <div className="video-items">
-            {this.state.videoId.map((item) => (<div key={item} className="video-item-container"><YouTube className="video-item" videoId={item} /></div>))}
+            {
+              this.state.videoId.map((videoId) => (
+                <div key={videoId} className="video-item-container"><iframe title={videoId} className="video-item" src={"https://www.youtube.com/embed/" + videoId} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe></div>
+              ))
+            }
           </div>
         </div>
         <div className="video-container container">
           <h1 className="video-title title">조이챈트 시즌1</h1>
           <div className="video-items">
-            {this.state.videoIdSeason1.map((item) => (<div key={item} className="video-item-container"><YouTube className="video-item" videoId={item} /></div>))}
+            {
+              this.state.videoIdSeason1.map((videoId) => (
+                <div key={videoId} className="video-item-container"><iframe title={videoId} className="video-item" src={"https://www.youtube.com/embed/" + videoId} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe></div>
+              ))
+            }
           </div>
         </div>
       </div>

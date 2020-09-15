@@ -2,8 +2,6 @@ import React from "react";
 import axios from 'axios';
 import "./Schana.css";
 import Channel from '../components/Channel';
-//import YoutubeDisplay from '../components/YoutubeDisplay';
-import YouTube from 'react-youtube';
 
 class Schana extends React.Component {
   state = {
@@ -106,7 +104,7 @@ class Schana extends React.Component {
                 <div className="loading-containger">Process Loading</div>
                 :
                 this.state.videoId.map((videoId) => (
-                  <div key={videoId} className="video-item-container"><YouTube className="video-item" videoId={videoId} /></div>
+                  <div key={videoId} className="video-item-container"><iframe title={videoId} className="video-item" src={"https://www.youtube.com/embed/" + videoId} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe></div>
                 ))
             }
           </div>
