@@ -1,7 +1,7 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 /*
@@ -36,3 +36,18 @@
   font-size: 35px;
 }
 */
+
+.inner {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.nav-inner {
+	display: flex;
+	justify-content: space-between;
+	padding: 20px 0;
+}
+
+.nav-inner a {
+	border: 1px solid;
+}

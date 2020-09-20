@@ -1,9 +1,6 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
-import Nav from 'react-bootstrap/Nav'
-import Navbar from 'react-bootstrap/Navbar'
+import { Link } from "react-router-dom";
 import "./Navigation.css";
-import Button from 'react-bootstrap/Button'
 
 // 신촌하나교회
 // 조이챈트
@@ -13,26 +10,14 @@ import Button from 'react-bootstrap/Button'
 // 수원하나교회
 function Navigation() {
     return (
-        <div className="container" expand="lg">
-            <Navbar className="justify-content-center" variant="light" bg="light">
-                <Nav variant="tabs" defaultActiveKey="/" as="ul">
-                    <Nav.Item as="li">
-                        <Nav.Link as={NavLink} to="/" exact><i className="home fas fa-home"></i></Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item as="li">
-                        <Nav.Link as={NavLink} to="/schana">신촌하나교회</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item as="li">
-                        <Nav.Link as={NavLink} to="/joychant">조이챈트</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item as="li">
-                        <Nav.Link as={NavLink} to="/tbd1">TBD</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item as="li">
-                        <Nav.Link as={NavLink} to="/tbd2">TBD</Nav.Link>
-                    </Nav.Item>
-                </Nav>
-            </Navbar>
+        <div className="nav-container">
+            <div className="row nav-inner inner">
+                <Link className="col-md-2 center-block btn btn-default" to="/" exact><i className="home fas fa-home"></i></Link>
+                <Link className="col-md-2 center-block btn btn-default" to="/schana">신촌하나교회</Link>
+                <Link className="col-md-2 center-block btn btn-default" to="/joychant">조이챈트</Link>
+                <Link className="col-md-2 center-block btn btn-default" to="/tbd1">TBD</Link>
+                <Link className="col-md-2 center-block btn btn-default" to="/tbd2">TBD</Link>
+            </div>
         </div>
     );
 }
