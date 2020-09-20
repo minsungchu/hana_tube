@@ -12,7 +12,7 @@ function Navigation() {
     return (
         <div className="nav-container">
             <div className="row nav-inner inner">
-                <Link className="col-md-2 center-block btn btn-default" to="/" exact><i className="home fas fa-home"></i></Link>
+                <Link className="col-md-2 center-block btn btn-default" to="/" exact="true"><i className="home fas fa-home"></i></Link>
                 <Link className="col-md-2 center-block btn btn-default" to="/schana">신촌하나교회</Link>
                 <Link className="col-md-2 center-block btn btn-default" to="/joychant">조이챈트</Link>
                 <Link className="col-md-2 center-block btn btn-default" to="/tbd1">TBD</Link>
