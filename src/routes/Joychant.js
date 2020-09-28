@@ -124,7 +124,7 @@ class Joychant extends React.Component {
     return (
       <div className="body">
         <div className="video-container">
-          <h1 className="video-title title">최신 업로드 영상</h1>
+          <h1 className="video-title title">조이챈트 최신 업로드 영상</h1>
           <div className="video-items">
             {
               loading ?
@@ -137,7 +137,7 @@ class Joychant extends React.Component {
           </div>
         </div>
         <div className="video-container">
-          <h1 className="video-title title">조이챈트 시즌1</h1>
+          <h1 className="video-title title-playlist">조이챈트 시즌1</h1>
           <div className="video-items">
             {
               loading ?

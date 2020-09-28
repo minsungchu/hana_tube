@@ -9,6 +9,8 @@ import Navigation from "./components/Navigation";
 import Schana from "./routes/Schana";
 import Joychant from "./routes/Joychant";
 import Home from "./routes/Home";
+import HanaMovement from "./routes/HanaMovement";
+import HanaWorship from "./routes/HanaWorship";
 
 class App extends React.Component {
   render() {
@@ -18,6 +20,10 @@ class App extends React.Component {
         <Route exact path="/" component={Home} />
         <Route path="/schana" component={Schana} />
         <Route path="/joychant" component={Joychant} />
+        <Route path="/hanamvment" component={HanaMovement} />
+        <Route path="/hanaworship" component={HanaWorship} />
+
+
       </HashRouter>
     );
   }

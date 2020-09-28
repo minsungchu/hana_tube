@@ -11,7 +11,8 @@
   margin: 30px;
 }
 
-.title {
+.title,
+.title-playlist {
   display: flex;
   justify-content: center;
   margin-top: 100px;
@@ -61,5 +62,10 @@
 
   .video-item {
     width: 360px;
+  }
+
+  .title,
+  .title-playlist {
+    font-size: 25px;
   }
 }
