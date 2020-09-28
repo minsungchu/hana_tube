@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "41dfc469fd5279674225e88580b03ab9",
+    "revision": "ef45fd3e36f3b8233ac46ebd135b0b67",
     "url": "/hana_tube/index.html"
   },
   {
-    "revision": "6ba6463f8ba979f547ac",
+    "revision": "6beebee97401f80f2f7b",
     "url": "/hana_tube/static/css/main.3d62a0a8.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/hana_tube/static/js/2.d83532c6.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6ba6463f8ba979f547ac",
-    "url": "/hana_tube/static/js/main.a36a359f.chunk.js"
+    "revision": "6beebee97401f80f2f7b",
+    "url": "/hana_tube/static/js/main.c5d15b0c.chunk.js"
   },
   {
     "revision": "8791f42012d3562c32f8",
