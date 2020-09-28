@@ -78,33 +78,15 @@ class Schana extends React.Component {
     const { loading } = this.state;
     return (
       <div className="body">
-        <div className="channel-container container">
-          <h1 className="title">유튜브 채널 정보</h1>
-          {
-            loading ?
-              <div className="loading-container">Process Loading</div>
-              :
-              <Channel
-                key={this.state.id}
-                imageLink={this.state.imageLink}
-                channelId={this.state.channelId}
-                title={this.state.title}
-                description={this.state.description}
-                videos={this.state.videos}
-                subscribers={this.state.subscribers}
-                views={this.state.views}
-              />
-          }
-        </div>
-        <div className="video-container container">
-          <h1 className="video-title title">최신 업로드 영상</h1>
-          <div className="video-items row">
+        <div className="video-container">
+          <h1 className="video-title title">신촌하나교회 최신 업로드 영상</h1>
+          <div className="video-items">
             {
               loading ?
                 <div className="loading-container">Process Loading</div>
                 :
                 this.state.videoId.map((videoId) => (
-                  <div key={videoId} className="video-item-container col-md-2"><iframe title={videoId} className="video-item" src={"https://www.youtube.com/embed/" + videoId} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe></div>
+                  <div key={videoId} className="video-item-container"><iframe title={videoId} className="video-item" src={"https://www.youtube.com/embed/" + videoId} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe></div>
                 ))
             }
           </div>

@@ -10,14 +10,23 @@ import "./Navigation.css";
 // 수원하나교회
 function Navigation() {
     return (
-        <div className="nav-container">
-            <div className="row nav-inner inner">
-                <Link className="col-md-2 center-block btn btn-default" to="/" exact="true"><i className="home fas fa-home"></i></Link>
-                <Link className="col-md-2 center-block btn btn-default" to="/schana">신촌하나교회</Link>
-                <Link className="col-md-2 center-block btn btn-default" to="/joychant">조이챈트</Link>
-                <Link className="col-md-2 center-block btn btn-default" to="/tbd1">TBD</Link>
-                <Link className="col-md-2 center-block btn btn-default" to="/tbd2">TBD</Link>
+        <div className="nav">
+            <div className="logo">
+                <div className="logo__icon"><i class="fas fa-dove"></i></div>
+                <div className="logo__title">HanaTube</div>
             </div>
+            <div className="nav__items">
+                <Link to="/" exact="true">홈</Link>
+                <Link to="/schana">신촌하나교회</Link>
+                <Link to="/joychant">조이챈트</Link>
+                <Link to="/tbd1">하나무브먼트</Link>
+                <Link to="/tbd2">하나워쉽무브먼트</Link>
+            </div>
+            <ul className="nav__icons">
+                <li><i class="fas fa-heart"></i></li>
+                <li><i class="fas fa-envelope"></i></li>
+            </ul>
+
         </div>
     );
 }
