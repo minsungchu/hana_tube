@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/hana_tube/static/css/main.155f1189.chunk.css",
+    "main.css": "/hana_tube/static/css/main.beafe521.chunk.css",
     "main.js": "/hana_tube/static/js/main.abba6217.chunk.js",
     "main.js.map": "/hana_tube/static/js/main.abba6217.chunk.js.map",
     "runtime-main.js": "/hana_tube/static/js/runtime-main.da6e090b.js",
@@ -8,15 +8,15 @@
     "static/js/2.fd1ce0c8.chunk.js": "/hana_tube/static/js/2.fd1ce0c8.chunk.js",
     "static/js/2.fd1ce0c8.chunk.js.map": "/hana_tube/static/js/2.fd1ce0c8.chunk.js.map",
     "index.html": "/hana_tube/index.html",
-    "precache-manifest.65462a0a0e787aa0c58f7ef1f8a6c2d9.js": "/hana_tube/precache-manifest.65462a0a0e787aa0c58f7ef1f8a6c2d9.js",
+    "precache-manifest.94382723d724aa8ad82ebaf3e1444935.js": "/hana_tube/precache-manifest.94382723d724aa8ad82ebaf3e1444935.js",
     "service-worker.js": "/hana_tube/service-worker.js",
-    "static/css/main.155f1189.chunk.css.map": "/hana_tube/static/css/main.155f1189.chunk.css.map",
+    "static/css/main.beafe521.chunk.css.map": "/hana_tube/static/css/main.beafe521.chunk.css.map",
     "static/js/2.fd1ce0c8.chunk.js.LICENSE.txt": "/hana_tube/static/js/2.fd1ce0c8.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.da6e090b.js",
     "static/js/2.fd1ce0c8.chunk.js",
-    "static/css/main.155f1189.chunk.css",
+    "static/css/main.beafe521.chunk.css",
     "static/js/main.abba6217.chunk.js"
   ]
 }
