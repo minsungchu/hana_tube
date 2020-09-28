@@ -16,8 +16,7 @@ function Navigation() {
                 <div className="logo__title">HanaTube</div>
             </div>
             <div className="nav__items">
-                <Link to="/" exact="true">홈</Link>
-                <Link to="/schana">신촌하나교회</Link>
+                <Link to="/" exact="true">신촌하나교회</Link>
                 <Link to="/joychant">조이챈트</Link>
                 <Link to="/hanamvment">하나무브먼트</Link>
                 <Link to="/hanaworship">하나워쉽무브먼트</Link>
